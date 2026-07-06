@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimas Anwar Aziz — Fullstack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0f172a',
+                        accent: '#38bdf8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-in { animation: fadeUp 0.6s ease-out forwards; opacity: 0; }
+        @keyframes fadeUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .section { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+        .section.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-dark text-gray-300 font-sans">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full bg-dark/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-white font-bold text-lg">dimas<span class="text-accent">.dev</span></span>
+            <div class="hidden md:flex gap-8 text-sm">
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#experience" class="hover:text-accent transition">Experience</a>
+                <a href="#projects" class="hover:text-accent transition">Projects</a>
+                <a href="#skills" class="hover:text-accent transition">Skills</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
+            </div>
+            <!-- Mobile menu button -->
+            <button onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="md:hidden text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-gray-800 px-6 pb-4">
+            <a href="#about" class="block py-2 hover:text-accent">About</a>
+            <a href="#experience" class="block py-2 hover:text-accent">Experience</a>
+            <a href="#projects" class="block py-2 hover:text-accent">Projects</a>
+            <a href="#skills" class="block py-2 hover:text-accent">Skills</a>
+            <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center justify-center px-6">
+        <div class="text-center max-w-3xl">
+            <p class="fade-in text-accent text-lg mb-4">Hi there, I'm</p>
+            <h1 class="fade-in text-5xl md:text-7xl font-bold text-white mb-6">Dimas Anwar Aziz</h1>
+            <p class="fade-in text-xl md:text-2xl text-gray-400 mb-4">Fullstack Developer</p>
+            <p class="fade-in text-gray-500 mb-10 max-w-xl mx-auto">Backend Engineer & Microservices Specialist. Building scalable systems with Go, JavaScript, and everything in between.</p>
+            <div class="fade-in flex gap-4 justify-center">
+                <a href="#projects" class="bg-accent text-dark font-semibold px-6 py-3 rounded-lg hover:bg-sky-400 transition">View My Work</a>
+                <a href="#contact" class="border border-gray-600 text-white px-6 py-3 rounded-lg hover:border-accent hover:text-accent transition">Get In Touch</a>
+            </div>
+            <div class="fade-in flex gap-6 justify-center mt-12 text-2xl text-gray-500">
+                <a href="https://github.com/dimasanwaraziz" target="_blank" class="hover:text-accent transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dimasanwaraziz/" target="_blank" class="hover:text-accent transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.upwork.com/freelancers/~01f8ee747cb0a2e650" target="_blank" class="hover:text-accent transition"><i class="fab fa-upwork"></i></a>
+                <a href="mailto:dimasanwaraziz@gmail.com" class="hover:text-accent transition"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-8">About Me</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="md:col-span-2 space-y-4 text-gray-400 leading-relaxed">
+                    <p>I'm a <span class="text-white">Fullstack Developer</span> with a strong focus on backend engineering and microservices architecture. I've built systems for government institutions and worked as a freelance developer on Upwork.</p>
+                    <p>My sweet spot is designing <span class="text-white">scalable, maintainable systems</span> — from API design and database architecture to deployment and monitoring. I prefer boring technology that works over trendy tools that don't.</p>
+                    <p>Currently open for freelance and full-time opportunities.</p>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+                        <div class="text-3xl font-bold text-accent mb-1">5+</div>
+                        <div class="text-sm text-gray-500">Years of Experience</div>
+                    </div>
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+                        <div class="text-3xl font-bold text-accent mb-1">10+</div>
+                        <div class="text-sm text-gray-500">Projects Delivered</div>
+                    </div>
+                    <div class="bg-gray-900 rounded-xl p-6 border border-gray-800">
+                        <div class="text-3xl font-bold text-accent mb-1">500+</div>
+                        <div class="text-sm text-gray-500">Users Served</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section py-24 px-6 bg-gray-900/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12">Experience</h2>
+            <div class="space-y-8">
+
+                <!-- DPR RI -->
+                <div class="border-l-2 border-accent pl-6">
+                    <div class="flex flex-wrap gap-2 items-start justify-between mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Backend Developer</h3>
+                            <p class="text-accent">DPR RI — Republik Indonesia</p>
+                        </div>
+                        <span class="text-sm text-gray-500 bg-gray-800 px-3 py-1 rounded-full">2023 — 2025</span>
+                    </div>
+                    <p class="text-gray-400 mt-3 mb-4">Developed and maintained the official business travel management system for the Indonesian House of Representatives (DPR RI).</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Built approval workflow system for 500+ parliament members and staff</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Designed microservices architecture for travel scheduling, budgeting, and reporting</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Integrated with existing government systems (SIMDP, finance module)</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Implemented real-time notifications and document management</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i><span class="text-gray-500 italic">* Source code confidential — government property</span></li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">Golang</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">PostgreSQL</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">Docker</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">Redis</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">Microservices</span>
+                    </div>
+                </div>
+
+                <!-- Freelance -->
+                <div class="border-l-2 border-gray-700 pl-6">
+                    <div class="flex flex-wrap gap-2 items-start justify-between mb-2">
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Freelance Developer</h3>
+                            <p class="text-accent">Upwork — Remote</p>
+                        </div>
+                        <span class="text-sm text-gray-500 bg-gray-800 px-3 py-1 rounded-full">2021 — Present</span>
+                    </div>
+                    <p class="text-gray-400 mt-3 mb-4">Delivered web applications and backend systems for international clients through Upwork.</p>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-check text-accent mr-2"></i>Built RESTful APIs and microservices for SaaS products</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Developed Laravel-based web applications with complex business logic</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Containerized applications with Docker for consistent deployments</li>
+                        <li><i class="fas fa-check text-accent mr-2"></i>Optimized database queries reducing response times by 60%</li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">JavaScript</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">Laravel</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">Node.js</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">PostgreSQL</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-3 py-1 rounded-full">Docker</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-4">Projects</h2>
+            <p class="text-gray-500 mb-12 max-w-xl">A selection of projects I've built. Some are open source, some are confidential.</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <!-- DPR RI Project -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-landmark text-2xl text-accent"></i>
+                            <h3 class="text-lg font-semibold text-white">Sistem Perjalanan Dinas</h3>
+                        </div>
+                        <i class="fas fa-lock text-gray-600 text-sm" title="Confidential"></i>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Business travel management system for DPR RI — handling approvals, scheduling, budgeting, and reporting for 500+ government officials.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Golang</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">PostgreSQL</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Redis</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Docker</span>
+                    </div>
+                    <div class="text-xs text-gray-600 italic">Confidential project — source code not available</div>
+                </div>
+
+                <!-- Add more projects here -->
+                <div class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group flex flex-col items-center justify-center text-center min-h-[200px]">
+                    <div class="w-16 h-16 rounded-full border-2 border-dashed border-gray-700 flex items-center justify-center mb-4">
+                        <i class="fas fa-plus text-gray-600 text-xl"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm">More projects coming soon</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section py-24 px-6 bg-gray-900/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12">Technical Skills</h2>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Languages -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fab fa-golang mr-2"></i>Golang</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fab fa-js-square mr-2"></i>JavaScript</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-code mr-2"></i>TypeScript</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fab fa-php mr-2"></i>PHP</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-database mr-2"></i>SQL</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Frameworks & Libraries</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fab fa-laravel mr-2"></i>Laravel</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fab fa-node-js mr-2"></i>Node.js</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-project-diagram mr-2"></i>Gin</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-server mr-2"></i>Fiber</span>
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Infrastructure & DevOps</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fab fa-docker mr-2"></i>Docker</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fab fa-github mr-2"></i>GitHub Actions</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-terminal mr-2"></i>Linux</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-network-wired mr-2"></i>Nginx</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Databases & Caching</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-database mr-2"></i>PostgreSQL</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-bolt mr-2"></i>Redis</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-database mr-2"></i>MySQL</span>
+                        <span class="bg-gray-800 text-white px-4 py-2 rounded-lg text-sm"><i class="fas fa-database mr-2"></i>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section py-24 px-6">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Get In Touch</h2>
+            <p class="text-gray-400 mb-10">I'm currently open for freelance projects and full-time opportunities. Let's talk about your next project.</p>
+
+            <div class="grid md:grid-cols-3 gap-4 mb-10">
+                <a href="mailto:dimasanwaraziz@gmail.com" class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <i class="fas fa-envelope text-accent text-2xl mb-3 group-hover:scale-110 transition-transform inline-block"></i>
+                    <p class="text-white font-medium text-sm">Email</p>
+                    <p class="text-gray-500 text-xs mt-1">dimasanwaraziz@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/dimasanwaraziz/" target="_blank" class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <i class="fab fa-linkedin text-accent text-2xl mb-3 group-hover:scale-110 transition-transform inline-block"></i>
+                    <p class="text-white font-medium text-sm">LinkedIn</p>
+                    <p class="text-gray-500 text-xs mt-1">Connect with me</p>
+                </a>
+                <a href="https://www.upwork.com/freelancers/~01f8ee747cb0a2e650" target="_blank" class="bg-gray-900 rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <i class="fab fa-upwork text-accent text-2xl mb-3 group-hover:scale-110 transition-transform inline-block"></i>
+                    <p class="text-white font-medium text-sm">Upwork</p>
+                    <p class="text-gray-500 text-xs mt-1">Hire me</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-gray-800 py-8 px-6 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 Dimas Anwar Aziz. Built with minimal dependencies.</p>
+    </footer>
+
+    <!-- Scroll animation -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section').forEach(section => observer.observe(section));
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
