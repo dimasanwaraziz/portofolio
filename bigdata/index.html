@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimas Anwar Aziz — Big Data Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0b0f1a',
+                        accent: '#38bdf8',
+                        surface: '#111827',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .section { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+        .section.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-dark text-gray-300 font-sans">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full bg-dark/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-white font-bold text-lg">dimas<span class="text-accent">.dev</span></span>
+            <div class="hidden md:flex gap-8 text-sm">
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#expertise" class="hover:text-accent transition">Expertise</a>
+                <a href="#projects" class="hover:text-accent transition">Projects</a>
+                <a href="#tools" class="hover:text-accent transition">Tools</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
+            </div>
+            <button onclick="document.getElementById('mm').classList.toggle('hidden')" class="md:hidden text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mm" class="hidden md:hidden bg-dark border-b border-gray-800 px-6 pb-4">
+            <a href="#about" class="block py-2 hover:text-accent">About</a>
+            <a href="#expertise" class="block py-2 hover:text-accent">Expertise</a>
+            <a href="#projects" class="block py-2 hover:text-accent">Projects</a>
+            <a href="#tools" class="block py-2 hover:text-accent">Tools</a>
+            <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center justify-center px-6">
+        <div class="text-center max-w-3xl">
+            <p class="text-accent text-lg mb-4">Data pipelines. Warehouses. Analytics.</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Dimas Anwar Aziz</h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-4">Big Data Engineer</p>
+            <p class="text-gray-500 mb-10 max-w-xl mx-auto">I move data from point A to point B — reliably, at scale, and on time. From raw logs to actionable dashboards.</p>
+            <div class="flex gap-4 justify-center">
+                <a href="#projects" class="bg-accent text-dark font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition">View Projects</a>
+                <a href="#contact" class="border border-gray-600 text-white px-6 py-3 rounded-lg hover:border-accent hover:text-accent transition">Contact</a>
+            </div>
+            <div class="flex gap-6 justify-center mt-12 text-2xl text-gray-500">
+                <a href="https://github.com/dimasanwaraziz" target="_blank" class="hover:text-accent transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dimasanwaraziz/" target="_blank" class="hover:text-accent transition"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:dimasanwaraziz@gmail.com" class="hover:text-accent transition"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-8">About</h2>
+            <p class="text-gray-400 leading-relaxed text-lg max-w-3xl">Big Data Engineer focused on <span class="text-white">building reliable data pipelines</span>, designing scalable data architectures, and turning raw data into clean, queryable datasets. I've worked on government-scale systems and freelance data projects.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                <div class="bg-surface rounded-xl p-5 border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-accent">TB+</div>
+                    <div class="text-xs text-gray-500 mt-1">Data Processed</div>
+                </div>
+                <div class="bg-surface rounded-xl p-5 border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-accent">20+</div>
+                    <div class="text-xs text-gray-500 mt-1">Pipelines Built</div>
+                </div>
+                <div class="bg-surface rounded-xl p-5 border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-accent">500+</div>
+                    <div class="text-xs text-gray-500 mt-1">Daily Jobs Run</div>
+                </div>
+                <div class="bg-surface rounded-xl p-5 border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-accent">5+</div>
+                    <div class="text-xs text-gray-500 mt-1">Years Exp</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section id="expertise" class="section py-24 px-6 bg-surface/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12">What I Do</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800">
+                    <i class="fas fa-stream text-accent text-2xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">ETL / ELT Pipelines</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Batch & real-time data ingestion</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Data transformation & orchestration</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Schema management & data quality checks</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Incremental loads & change data capture</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800">
+                    <i class="fas fa-warehouse text-accent text-2xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Data Warehouse & Lakehouse</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Dimensional modeling (star/snowflake)</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Cloud data warehouse design</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Data partitioning & query optimization</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Data catalog & governance</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800">
+                    <i class="fas fa-bolt text-accent text-2xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Real-Time Processing</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Stream processing with Kafka / Kinesis</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Real-time dashboards & alerts</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Event-driven architecture</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Low-latency data delivery</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800">
+                    <i class="fas fa-chart-bar text-accent text-2xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Analytics & BI</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Dashboard design & KPI tracking</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Self-service analytics setup</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>SQL optimization & performance tuning</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Data storytelling & reporting</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-4">Projects</h2>
+            <p class="text-gray-500 mb-12 max-w-xl">Selected work in data engineering and analytics.</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-database text-accent text-xl"></i>
+                            <h3 class="text-lg font-semibold text-white">Data Platform — DPR RI</h3>
+                        </div>
+                        <i class="fas fa-lock text-gray-600 text-sm"></i>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Built ETL pipelines and data warehouse for legislative analytics — processing travel, attendance, and budget data for 500+ government officials.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Apache Spark</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Airflow</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">PostgreSQL</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Grafana</span>
+                    </div>
+                    <div class="text-xs text-gray-600 italic">Confidential — government project</div>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-exchange-alt text-accent text-xl"></i>
+                        <h3 class="text-lg font-semibold text-white">ETL Pipeline — E-Commerce</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Designed daily ETL pipeline for e-commerce analytics — aggregating orders, customer behavior, and inventory data into a centralized warehouse.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Airflow</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">BigQuery</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">dbt</span>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-project-diagram text-accent text-xl"></i>
+                        <h3 class="text-lg font-semibold text-white">Data Warehouse Migration</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Migrated on-premise data warehouse to cloud — rebuilt star schemas, optimized SQL queries, and automated data quality monitoring.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">BigQuery</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">dbt</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Python</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">GCP</span>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-bolt text-accent text-xl"></i>
+                        <h3 class="text-lg font-semibold text-white">Real-Time Analytics Dashboard</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Built real-time streaming pipeline ingesting application events into ClickHouse for live dashboard visualization and alerting.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Kafka</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">ClickHouse</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Grafana</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Go</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools" class="section py-24 px-6 bg-surface/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12">Tools & Technologies</h2>
+
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Processing & Orchestration</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Apache Spark</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Apache Kafka</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Airflow</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">dbt</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Databases & Warehouses</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">PostgreSQL</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">BigQuery</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">ClickHouse</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">MySQL</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">MongoDB</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Redis</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">BI & Visualization</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Grafana</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Superset</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Metabase</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Python</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">SQL</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Golang</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Bash</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Cloud & Infra</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">AWS</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">GCP</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Docker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section py-24 px-6">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Let's Talk</h2>
+            <p class="text-gray-400 mb-10">Need someone to design data pipelines or architect your data platform? Reach out.</p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <a href="mailto:dimasanwaraziz@gmail.com" class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <i class="fas fa-envelope text-accent text-2xl mb-3 group-hover:scale-110 transition-transform inline-block"></i>
+                    <p class="text-white font-medium text-sm">Email</p>
+                    <p class="text-gray-500 text-xs mt-1">dimasanwaraziz@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/dimasanwaraziz/" target="_blank" class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <i class="fab fa-linkedin text-accent text-2xl mb-3 group-hover:scale-110 transition-transform inline-block"></i>
+                    <p class="text-white font-medium text-sm">LinkedIn</p>
+                    <p class="text-gray-500 text-xs mt-1">Connect</p>
+                </a>
+                <a href="https://www.upwork.com/freelancers/~01f8ee747cb0a2e650" target="_blank" class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <i class="fab fa-upwork text-accent text-2xl mb-3 group-hover:scale-110 transition-transform inline-block"></i>
+                    <p class="text-white font-medium text-sm">Upwork</p>
+                    <p class="text-gray-500 text-xs mt-1">Hire me</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-gray-800 py-8 px-6 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 Dimas Anwar Aziz. Big Data Engineer Portfolio.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.section').forEach(s => observer.observe(s));
+        document.querySelectorAll('#mm a').forEach(l => l.addEventListener('click', () => document.getElementById('mm').classList.add('hidden')));
+    </script>
+
+</body>
+</html>

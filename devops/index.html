@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimas Anwar Aziz — DevOps Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0b0f1a',
+                        accent: '#a78bfa',
+                        surface: '#111827',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .section { opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out; }
+        .section.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-dark text-gray-300 font-sans">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 w-full bg-dark/90 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-white font-bold text-lg">dimas<span class="text-accent">.dev</span></span>
+            <div class="hidden md:flex gap-8 text-sm">
+                <a href="#about" class="hover:text-accent transition">About</a>
+                <a href="#expertise" class="hover:text-accent transition">Expertise</a>
+                <a href="#projects" class="hover:text-accent transition">Projects</a>
+                <a href="#tools" class="hover:text-accent transition">Tools</a>
+                <a href="#contact" class="hover:text-accent transition">Contact</a>
+            </div>
+            <button onclick="document.getElementById('mm').classList.toggle('hidden')" class="md:hidden text-white">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div id="mm" class="hidden md:hidden bg-dark border-b border-gray-800 px-6 pb-4">
+            <a href="#about" class="block py-2 hover:text-accent">About</a>
+            <a href="#expertise" class="block py-2 hover:text-accent">Expertise</a>
+            <a href="#projects" class="block py-2 hover:text-accent">Projects</a>
+            <a href="#tools" class="block py-2 hover:text-accent">Tools</a>
+            <a href="#contact" class="block py-2 hover:text-accent">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex items-center justify-center px-6">
+        <div class="text-center max-w-3xl">
+            <p class="text-accent text-lg mb-4">Infrastructure. Automation. Reliability.</p>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Dimas Anwar Aziz</h1>
+            <p class="text-xl md:text-2xl text-gray-400 mb-4">DevOps Engineer</p>
+            <p class="text-gray-500 mb-10 max-w-xl mx-auto">I automate infrastructure, build CI/CD pipelines, and make sure production stays up. Less manual work, more sleep.</p>
+            <div class="flex gap-4 justify-center">
+                <a href="#projects" class="bg-accent text-dark font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition">View Projects</a>
+                <a href="#contact" class="border border-gray-600 text-white px-6 py-3 rounded-lg hover:border-accent hover:text-accent transition">Contact</a>
+            </div>
+            <div class="flex gap-6 justify-center mt-12 text-2xl text-gray-500">
+                <a href="https://github.com/dimasanwaraziz" target="_blank" class="hover:text-accent transition"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dimasanwaraziz/" target="_blank" class="hover:text-accent transition"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:dimasanwaraziz@gmail.com" class="hover:text-accent transition"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-8">About</h2>
+            <p class="text-gray-400 leading-relaxed text-lg max-w-3xl">DevOps Engineer focused on <span class="text-white">infrastructure automation</span>, <span class="text-white">CI/CD pipelines</span>, and <span class="text-white">reliable deployments</span>. I bridge the gap between development and operations — code commits, systems deploy, nothing breaks.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                <div class="bg-surface rounded-xl p-5 border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-accent">99.9%</div>
+                    <div class="text-xs text-gray-500 mt-1">Uptime Target</div>
+                </div>
+                <div class="bg-surface rounded-xl p-5 border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-accent">50+</div>
+                    <div class="text-xs text-gray-500 mt-1">Deployments / Week</div>
+                </div>
+                <div class="bg-surface rounded-xl p-5 border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-accent">&lt;5min</div>
+                    <div class="text-xs text-gray-500 mt-1">MTTR Target</div>
+                </div>
+                <div class="bg-surface rounded-xl p-5 border border-gray-800 text-center">
+                    <div class="text-2xl font-bold text-accent">5+</div>
+                    <div class="text-xs text-gray-500 mt-1">Years Exp</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section id="expertise" class="section py-24 px-6 bg-surface/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12">What I Do</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800">
+                    <i class="fas fa-infinity text-accent text-2xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">CI/CD Pipelines</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Automated build, test, and deploy workflows</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Multi-environment deployments (dev, staging, prod)</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Rollback strategies & blue-green deployments</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Artifact management & versioning</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800">
+                    <i class="fab fa-docker text-accent text-2xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Container Orchestration</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Docker containerization & image optimization</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Kubernetes cluster management</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Service mesh & ingress configuration</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Auto-scaling & resource management</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800">
+                    <i class="fas fa-code-branch text-accent text-2xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Infrastructure as Code</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Terraform for cloud infrastructure provisioning</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Ansible for configuration management</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Environment parity (dev = staging = prod)</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>State management & drift detection</li>
+                    </ul>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800">
+                    <i class="fas fa-heartbeat text-accent text-2xl mb-4"></i>
+                    <h3 class="text-lg font-semibold text-white mb-2">Observability</h3>
+                    <ul class="text-gray-400 text-sm space-y-2">
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Metrics collection with Prometheus</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Dashboarding with Grafana</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Centralized logging (Loki, ELK)</li>
+                        <li><i class="fas fa-chevron-right text-accent mr-2"></i>Alerting & incident response</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-4">Projects</h2>
+            <p class="text-gray-500 mb-12 max-w-xl">Infrastructure, automation, and reliability work.</p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-server text-accent text-xl"></i>
+                            <h3 class="text-lg font-semibold text-white">Infrastructure Setup — DPR RI</h3>
+                        </div>
+                        <i class="fas fa-lock text-gray-600 text-sm"></i>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Designed and maintained server infrastructure for government applications — containerized deployments, load balancing, and monitoring for 500+ concurrent users.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Docker</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Nginx</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Prometheus</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Grafana</span>
+                    </div>
+                    <div class="text-xs text-gray-600 italic">Confidential — government project</div>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-infinity text-accent text-xl"></i>
+                        <h3 class="text-lg font-semibold text-white">CI/CD Platform — Freelance</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Built automated CI/CD pipelines for multiple clients — zero-downtime deployments with staging previews and automatic rollback on failure.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">GitHub Actions</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Docker</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Terraform</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">AWS</span>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-cubes text-accent text-xl"></i>
+                        <h3 class="text-lg font-semibold text-white">Kubernetes Migration</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Migrated monolithic VM-based deployment to Kubernetes cluster — improved deployment frequency from weekly to multiple times per day.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Kubernetes</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Helm</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">ArgoCD</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">GCP</span>
+                    </div>
+                </div>
+
+                <div class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i class="fas fa-heartbeat text-accent text-xl"></i>
+                        <h3 class="text-lg font-semibold text-white">Observability Stack</h3>
+                    </div>
+                    <p class="text-gray-400 text-sm mb-4">Deployed full monitoring stack across microservices — metrics, logs, and tracing. Reduced MTTR from hours to under 10 minutes.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Prometheus</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Grafana</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Loki</span>
+                        <span class="text-xs bg-gray-800 text-gray-400 px-2 py-1 rounded">Alertmanager</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TOOLS -->
+    <section id="tools" class="section py-24 px-6 bg-surface/50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-white mb-12">Tools & Technologies</h2>
+
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">CI/CD</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">GitHub Actions</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">GitLab CI</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">ArgoCD</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Jenkins</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Containers & Orchestration</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Docker</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Kubernetes</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Helm</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Docker Compose</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Infrastructure as Code</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Terraform</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Ansible</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Packer</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Monitoring & Logging</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Prometheus</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Grafana</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Loki</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">ELK Stack</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Alertmanager</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Cloud Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">AWS</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Google Cloud</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Azure</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-4">Networking & Servers</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Nginx</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Linux</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Bash</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">SSH</span>
+                        <span class="bg-surface text-white px-4 py-2 rounded-lg text-sm border border-gray-800">Firewall / IAM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section py-24 px-6">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Let's Talk</h2>
+            <p class="text-gray-400 mb-10">Need someone to automate your infrastructure or build reliable deployments? Reach out.</p>
+            <div class="grid md:grid-cols-3 gap-4">
+                <a href="mailto:dimasanwaraziz@gmail.com" class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <i class="fas fa-envelope text-accent text-2xl mb-3 group-hover:scale-110 transition-transform inline-block"></i>
+                    <p class="text-white font-medium text-sm">Email</p>
+                    <p class="text-gray-500 text-xs mt-1">dimasanwaraziz@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/dimasanwaraziz/" target="_blank" class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <i class="fab fa-linkedin text-accent text-2xl mb-3 group-hover:scale-110 transition-transform inline-block"></i>
+                    <p class="text-white font-medium text-sm">LinkedIn</p>
+                    <p class="text-gray-500 text-xs mt-1">Connect</p>
+                </a>
+                <a href="https://www.upwork.com/freelancers/~01f8ee747cb0a2e650" target="_blank" class="bg-surface rounded-xl p-6 border border-gray-800 hover:border-accent/50 transition group">
+                    <i class="fab fa-upwork text-accent text-2xl mb-3 group-hover:scale-110 transition-transform inline-block"></i>
+                    <p class="text-white font-medium text-sm">Upwork</p>
+                    <p class="text-gray-500 text-xs mt-1">Hire me</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-gray-800 py-8 px-6 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 Dimas Anwar Aziz. DevOps Engineer Portfolio.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.section').forEach(s => observer.observe(s));
+        document.querySelectorAll('#mm a').forEach(l => l.addEventListener('click', () => document.getElementById('mm').classList.add('hidden')));
+    </script>
+
+</body>
+</html>
